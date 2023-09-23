@@ -1,6 +1,7 @@
-#include <iostream>
+#include <fmt/core.h>
+#include <vector>
+#include <string>
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+auto main() -> int {
     return 0;
-}
+};
