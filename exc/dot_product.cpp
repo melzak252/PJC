@@ -1,15 +1,11 @@
 #include <fmt/core.h>
 #include <vector>
-#include <string>
 #include <cassert>
+#include <numeric>
 
 auto dot_product(const std::vector<double>& vec_a, const std::vector<double>& vec_b) -> double{
     assert(vec_a.size() == vec_b.size());
-    auto result = double ();
-    for(int i = 0; i < vec_a.size(); i++){
-        result += vec_a[i] * vec_b[i];
-    }
-
+    auto result = std::inner_product(vec_a.begin(), vec_a.end(), vec_b.begin(), 0.0);
     return result;
 }
 
